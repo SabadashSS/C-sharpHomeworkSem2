@@ -8,10 +8,16 @@ namespace HelloWorld
 { 
     class Program 
     { 
-        public static void Main(string[] args) 
+        static void Main(string[] args) 
         { 
-            int number = GetRandomNumber();
- 
+            string str = Convert.ToString(GetRandomNumber()); 
+            Console.WriteLine(str); 
+            Console.WriteLine($"{str[0]}{str[2]}"); 
         } 
+        public static int GetRandomNumber() 
+        { 
+            int number = new Random().Next(100, 1000); 
+            return number; 
+        }
     } 
 }
