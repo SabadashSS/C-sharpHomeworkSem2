@@ -9,9 +9,18 @@ namespace HelloWorld
     { 
         static void Main(string[] args) 
         { 
-            string str = Convert.ToString(Console.ReadLine());
-            
-            Console.WriteLine($"{str[1]}");
+            Console.WriteLine("Введите 3ех значное число:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            var str = number.ToString();
+            if (99 < number && number < 1000)
+            {
+            Console.WriteLine($"Вторая цифра:{str[1]}");
+            }
+            else
+            {
+                Console.WriteLine($"Не соответсвует условиям:{str}");
+            }
+
         } 
     } 
 }
